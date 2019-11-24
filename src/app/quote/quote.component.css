@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.myquote {
+  background: url(https://bit.ly/2KPMXiR);
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+.mybtn{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
