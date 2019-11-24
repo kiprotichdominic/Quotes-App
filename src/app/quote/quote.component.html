@@ -1,38 +1,40 @@
 <div class="myquote">
   <div class="container-fluid">
     <h1 class="text-center pt">Quotes App</h1>
-    <br>
+    <br />
     <p class="text-center">Publish your quotes today</p>
-    <br><br>
-    <div class="text-center">
-      <a href="#addquote" class="btn btn-outline-success p-1 mybtn">Create Quote</a>
+    <div class="text-center pt-1">
+      <a href="#addquote" class="btn btn-outline-success p-1 mybtn"
+        >Create Quote</a
+      >
     </div>
   </div>
 </div>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div *ngFor="let quote of quotes; let i = index">
-        <div>
-          <h4 id="{{ i }}" appStrikethrough>
-            {{ quote.name }} due on {{ quote.completeDate | date | uppercase }}
-          </h4>
-          <button (click)="toggleDetails(i)" class="btn btn-primary">
-            Toggle Details
-          </button>
-        </div>
-
-        <div *ngIf="quote.showDescription">
+<br />
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let quote of quotes; let i = index">
+          <div>
+            <h4 id="{{ i }}" appStrikethrough>
+              {{ quote.name }} due on
+              {{ quote.completeDate | date | uppercase }}
+            </h4>
+            <button (click)="toggleDetails(i)" class="btn btn-primary">
+              Toggle Details
+            </button>
+          </div>
           <app-quote-detail
+            *ngIf="quote.showDescription"
             [quote]="quote"
-            (isComplete)="deletequote($event, i)"
+            (isComplete)="deleteQuote($event, i)"
           ></app-quote-detail>
         </div>
       </div>
     </div>
+    <p *ngIf="quotes.length > 5">You have too many quotes</p>
   </div>
-  <p *ngIf="quotes.length > 5">You have too many quotes</p>
 </div>
 <div class="container" id="addquote">
   <div class="col-md-12">
