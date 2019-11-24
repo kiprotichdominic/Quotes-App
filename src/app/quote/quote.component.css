@@ -8,8 +8,26 @@
   font-weight: bold;
   font-size: larger;
 }
-.mybtn{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+
+.mybtn {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  height: 20vh;
+  background-color: tomato;
+  color: black;
+  font-weight: bold;
+}
+
+.link {
+  color: black;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: white;
 }
