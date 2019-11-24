@@ -11,7 +11,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div *ngFor="let quote of quotes; let i = index">
         <div>
           <h4 id="{{ i }}" appStrikethrough>
@@ -30,9 +30,17 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
   </div>
   <p *ngIf="quotes.length > 5">You have too many quotes</p>
 </div>
+<div class="container">
+  <div class="col-md-12">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
+</div>
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3">
+    © 2019 Copyright:
+    <a href="quote.component.html"> Kiprotich Dominic</a>
+  </div>
+</footer>
