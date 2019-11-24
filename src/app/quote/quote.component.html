@@ -3,9 +3,7 @@
     <h1 class="text-center pt-5">Quotes App</h1>
     <p class="text-center">Publish your quotes today</p>
     <div class="text-center">
-      <button class="btn btn-outline-success">
-        Create Quote
-      </button>
+      <a href="#addquote" class="btn btn-outline-success">Create Quote</a>
     </div>
   </div>
 </div>
@@ -33,7 +31,7 @@
   </div>
   <p *ngIf="quotes.length > 5">You have too many quotes</p>
 </div>
-<div class="container">
+<div class="container" id="addquote">
   <div class="col-md-12">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
