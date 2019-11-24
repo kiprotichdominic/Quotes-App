@@ -1,5 +1,21 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <p>{{ quote.description }}</p>
 <p>This quote will be complete in {{ quote.completeDate | dateCount }} days</p>
-<button (click)="quoteDelete(true)" class="btn btn-outline-danger">
-  Delete Quote
-</button>
+<div _ngcontent-tvk-c2="" class="row">
+  <div _ngcontent-tvk-c2="">
+    <span _ngcontent-tvk-c2="" class="m-4">0</span
+    ><i _ngcontent-tvk-c2="" class="fa fa-thumbs-up pr-4 like"></i
+    ><i _ngcontent-tvk-c2="" class="fa fa-thumbs-down pr-3 dislike"></i
+    ><span _ngcontent-tvk-c2="">0</span>
+  </div>
+  <button (click)="quoteDelete(true)" class="btn btn-outline-danger ml-auto mr-3">
+    <i _ngcontent-tvk-c2="" class="fa fa-trash-o"></i>
+  </button>
+</div>
