@@ -14,21 +14,26 @@
 </div>
 <div class="row">
   <div>
-    <span class="m-4">count: {{ clickCounter }}</span>
-    <a
-      href="#"
-      onclick="event.preventDefault()"
-      (click)="countClick()"
-    >
+    <span class="m-4">{{ clickCounter }}</span>
+    <a href="#" onclick="event.preventDefault()" (click)="countClick()">
       <i
         class="fa fa-thumbs-up pr-4 like"
         ng-click="count = count + 1"
         ng-init="count=0"
         style="color:green;"
-      ></i
-    ></a>
-    <i class="fa fa-thumbs-down pr-3 dislike" style="color:red;"></i
-    ><span>0</span>
+      ></i>
+    </a>
+  </div>
+  <div>
+    <a href="#" onclick="event.preventDefault()" (click)="countDislike()">
+      <i
+        class="fa fa-thumbs-down pr-3 dislike"
+        ng-click="count = count + 1"
+        ng-init="count=0"
+        style="color:red;"
+      ></i>
+    </a>
+    <span class="m-4">{{ dislikeCounter }}</span>
   </div>
   <button
     (click)="quoteDelete(true)"

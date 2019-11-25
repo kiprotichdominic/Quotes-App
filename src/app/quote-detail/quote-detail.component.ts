@@ -8,6 +8,7 @@ import { Quote } from "../quote";
 })
 export class QuoteDetailComponent implements OnInit {
   clickCounter: number = 0;
+  dislikeCounter: number = 0;
 
   @Input() quote: Quote;
 
@@ -22,5 +23,8 @@ export class QuoteDetailComponent implements OnInit {
 
   countClick() {
     this.clickCounter += 1;
+  }
+  countDislike() {
+    this.dislikeCounter += 1;
   }
 }
