@@ -1,10 +1,11 @@
 <div class="myquote">
+  <br>
+  <br>
   <div class="container-fluid">
     <h1 class="text-center fadeIn">Quotes App</h1>
-    <br />
     <p class="text-center">Publish your quotes today</p>
     <div class="text-center pt-1">
-      <a href="#addquote" class="btn btn-outline-success p-1 mybtn"
+      <a href="#addquote" class="btn btn-outline-success btn-lg p-1 mybtn"
         >Create Quote</a
       >
     </div>
@@ -20,10 +21,9 @@
             <h4 id="{{ i }}" appStrikethrough>
               {{ quote.name }} due on
               {{ quote.completeDate | date | uppercase }}
-              
             </h4>
             <button (click)="toggleDetails(i)" class="btn btn-primary">
-              Toggle Details
+              Reveal Quote
             </button>
           </div>
           <app-quote-detail
@@ -42,7 +42,7 @@
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
 </div>
-<br>
+<br />
 <footer class="page-footer font-small blue">
   <div class="footer-copyright text-center pt-5">
     © 2019 Copyright:

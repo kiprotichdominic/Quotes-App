@@ -6,13 +6,28 @@
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 />
-<p>{{ quote.description }}</p>
-<p>This quote will be complete in {{ quote.completeDate | dateCount }} days</p>
+<div [@openClose]="isOpen ? 'open' : 'closed'">
+  <p>{{ quote.description }}</p>
+  <p>
+    This quote will be complete in {{ quote.completeDate | dateCount }} days
+  </p>
+</div>
 <div class="row">
   <div>
-    <span class="m-4">0</span
-    ><i class="fa fa-thumbs-up pr-4 like" style="color:green;"></i
-    ><i class="fa fa-thumbs-down pr-3 dislike" style="color:red;"></i
+    <span class="m-4">count: {{ clickCounter }}</span>
+    <a
+      href="#"
+      onclick="event.preventDefault()"
+      (click)="countClick()"
+    >
+      <i
+        class="fa fa-thumbs-up pr-4 like"
+        ng-click="count = count + 1"
+        ng-init="count=0"
+        style="color:green;"
+      ></i
+    ></a>
+    <i class="fa fa-thumbs-down pr-3 dislike" style="color:red;"></i
     ><span>0</span>
   </div>
   <button

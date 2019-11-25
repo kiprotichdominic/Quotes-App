@@ -1,10 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { Quote } from "../quote";
+import {trigger,  state,  style,  animate,  transition } from "@angular/animations";
 
 @Component({
   selector: "app-quote",
   templateUrl: "./quote.component.html",
-  styleUrls: ["./quote.component.css"]
+  styleUrls: ["./quote.component.css"],
+  animations: [""]
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [

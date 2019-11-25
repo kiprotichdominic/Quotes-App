@@ -7,6 +7,8 @@ import { Quote } from "../quote";
   styleUrls: ["./quote-detail.component.css"]
 })
 export class QuoteDetailComponent implements OnInit {
+  clickCounter: number = 0;
+
   @Input() quote: Quote;
 
   quoteDelete(complete: boolean) {
@@ -17,4 +19,8 @@ export class QuoteDetailComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  countClick() {
+    this.clickCounter += 1;
+  }
 }
