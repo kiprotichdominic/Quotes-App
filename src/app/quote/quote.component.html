@@ -17,23 +17,31 @@
     <div class="row">
       <div class="col-md-12">
         <div *ngFor="let quote of quotes; let i = index">
-         <div class="card mb-3 shadow p-3 mycard">
+          <div class="card mb-3 shadow p-3 mycard">
             <div>
-                <h4 id="{{ i }}" appStrikethrough>
-                  {{ quote.name }} due on
-                  {{ quote.completeDate | date }}
-                </h4>
-                <button (click)="toggleDetails(i)" class="btn btn-primary">
-                  Reveal Quote
-                </button>
-              </div>
-              <app-quote-detail
-                *ngIf="quote.showDescription"
-                [quote]="quote"
-                (isComplete)="deleteQuote($event, i)"
-              >
-              </app-quote-detail>
-         </div>
+              <h4 id="{{ i }}" appStrikethrough>
+                {{ quote.name }} due on
+                {{ quote.completeDate | date }}
+              </h4>
+              <small
+                ><button
+                  (click)="toggleDetails(i)"
+                  (click)="quote.hide = !quote.hide"
+                  class="btn btn-outline-primary btn-sm"
+                >
+                  <i
+                    [ngClass]="quote.hide ? 'fa fa-minus' : 'fa fa-plus'"
+                    class="fa fa-plus"
+                  ></i></button
+              ></small>
+            </div>
+            <app-quote-detail
+              *ngIf="quote.showDescription"
+              [quote]="quote"
+              (isComplete)="deleteQuote($event, i)"
+            >
+            </app-quote-detail>
+          </div>
         </div>
       </div>
     </div>
