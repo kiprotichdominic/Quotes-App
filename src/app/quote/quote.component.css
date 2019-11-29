@@ -1,3 +1,7 @@
+.mycard:hover {
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
 .myquote {
   background: url(https://bit.ly/2KPMXiR);
   height: 50vh;

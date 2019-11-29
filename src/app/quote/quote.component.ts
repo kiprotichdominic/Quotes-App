@@ -11,20 +11,20 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
       1,
-      "Posted by Anthony",
-      "Find an online version and watch merlin find his son",
+      "Posted by Abdifatah",
+      "There is no true Liberation, without the liberation of a woman",
       new Date(2020, 3, 14)
     ),
     new Quote(
       2,
-      "Posted by Rose",
-      "I have to buy cookies for the parrot",
+      "Posted by Steve Jobs",
+      "If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.",
       new Date(2019, 6, 9)
     ),
     new Quote(
       3,
-      "Posted by Justus",
-      "Diana has her birthday coming up soon",
+      "Posted by JWinston Churchill",
+      "The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.",
       new Date(2022, 1, 12)
     ),
     new Quote(
@@ -33,11 +33,16 @@ export class QuoteComponent implements OnInit {
       "Pupper likes expensive snacks",
       new Date(2019, 0, 18)
     ),
-    new Quote(5, "Posted By Philiph", "Damn Math", new Date(2019, 2, 14)),
+    new Quote(
+      5,
+      "Posted By Unknown",
+      "You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.",
+      new Date(2019, 2, 14)
+    ),
     new Quote(
       6,
-      "Posted by Kolum",
-      "Cause I am an evil overlord",
+      "Posted by Will Rogers",
+      "Don’t Let Yesterday Take Up Too Much Of Today.",
       new Date(2030, 3, 14)
     )
   ];

@@ -1,7 +1,7 @@
-<div [@openClose]="isOpen ? 'open' : 'closed'">
+<div>
   <p>{{ quote.description }}</p>
   <p>
-    This quote will be complete in {{ quote.completeDate | dateCount }} days
+    This quote was posted:  {{ quote.completeDate | dateCount }} days
   </p>
 </div>
 <div class="row">
