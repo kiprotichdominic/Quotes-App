@@ -1,6 +1,30 @@
 # Quotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Author
+
+  Kiprotich Dominic Korir
+
+## Description
+
+  This is a web application that enables users and motovational speakers to read,create,delete,like,and dislike quotes.
+
+## Technologies
+
+- HTML5
+- Css3
+- Typescript
+- Angular 8
+
+## Behavior Driven Development
+
+  1. Create a quote.
+  2. Like or dislike a quote
+  3. Delete a quote
+  4. View the highest voted quote
+
+## Contact
+
+- <a href="https://twitter.com/kiprotichdommie">Kiprotich Dominic</a>
 
 ## Development server
 

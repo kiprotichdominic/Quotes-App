@@ -1,5 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { Quote } from "../quote";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 @Component({
   selector: "app-quote",
@@ -8,6 +16,10 @@ import { Quote } from "../quote";
   animations: [""]
 })
 export class QuoteComponent implements OnInit {
+  myStyle: object = {};
+  myParams: object = {};
+  width: number = 100;
+  height: number = 100;
   quotes: Quote[] = [
     new Quote(
       1,
@@ -70,5 +82,33 @@ export class QuoteComponent implements OnInit {
   }
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.myStyle = {
+      position: "fixed",
+      width: "100%",
+      height: "100%",
+      "z-index": -1,
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0
+    };
+
+    this.myParams = {
+      particles: {
+        number: {
+          value: 500
+        },
+        color: {
+          value: "#ff0000"
+        },
+        shape: {
+          type: "circle",
+          polygon: {
+            nb_sides: 5
+          }
+        }
+      }
+    };
+  }
 }
