@@ -24,7 +24,7 @@
 
 ## Contact
 
-- <a href="https://twitter.com/kiprotichdommie">Kiprotich Dominic</a>
+- Kiprotich Dominic</a>
 
 ## Development server
 

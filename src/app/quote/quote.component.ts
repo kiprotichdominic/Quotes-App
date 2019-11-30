@@ -1,13 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Quote } from "../quote";
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
 
 @Component({
   selector: "app-quote",
@@ -25,37 +17,37 @@ export class QuoteComponent implements OnInit {
       1,
       "Posted by Abdifatah",
       "There is no true Liberation, without the liberation of a woman",
-      new Date(2020, 3, 14)
+      new Date(2019, 11, 12)
     ),
     new Quote(
       2,
       "Posted by Steve Jobs",
       "If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.",
-      new Date(2019, 6, 9)
+      new Date(2019, 11, 12)
     ),
     new Quote(
       3,
       "Posted by JWinston Churchill",
       "The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.",
-      new Date(2022, 1, 12)
+      new Date(2019, 11, 12)
     ),
     new Quote(
       4,
       "Posted By Evans",
       "Pupper likes expensive snacks",
-      new Date(2019, 0, 18)
+      new Date(2019, 11, 12)
     ),
     new Quote(
       5,
       "Posted By Unknown",
       "You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.",
-      new Date(2019, 2, 14)
+      new Date(2019, 11, 12)
     ),
     new Quote(
       6,
       "Posted by Will Rogers",
       "Don’t Let Yesterday Take Up Too Much Of Today.",
-      new Date(2030, 3, 14)
+      new Date()
     )
   ];
   toggleDetails(index) {

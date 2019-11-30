@@ -11,7 +11,12 @@
     </div>
   </div>
 </div>
-<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+<particles
+  [params]="myParams"
+  [style]="myStyle"
+  [width]="width"
+  [height]="height"
+></particles>
 <br />
 <div class="container-fluid">
   <div class="container">
@@ -20,10 +25,10 @@
         <div *ngFor="let quote of quotes; let i = index">
           <div class="card mb-3 shadow p-3 mycard">
             <div>
-              <h4 id="{{ i }}" appStrikethrough>
-                {{ quote.name }} due on
-                {{ quote.completeDate | date }}
-              </h4>
+              <h6 class="badge" id="{{ i }}" appStrikethrough>
+                {{ quote.name }}
+              </h6>
+              &nbsp;
               <small
                 ><button
                   (click)="toggleDetails(i)"
@@ -46,7 +51,6 @@
         </div>
       </div>
     </div>
-    <p *ngIf="quotes.length > 5">You have too many quotes</p>
   </div>
 </div>
 <div class="container" id="addquote">
