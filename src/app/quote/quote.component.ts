@@ -47,7 +47,7 @@ export class QuoteComponent implements OnInit {
       6,
       "Posted by Will Rogers",
       "Don’t Let Yesterday Take Up Too Much Of Today.",
-      new Date()
+      new Date(2019, 12, 1)
     )
   ];
   toggleDetails(index) {
