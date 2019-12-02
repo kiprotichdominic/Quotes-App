@@ -26,7 +26,7 @@
           <div class="card mb-3 shadow p-3 mycard">
             <div>
               <h6 class="badge" id="{{ i }}" appStrikethrough>
-                {{ quote.name }}
+                {{ quote.name }} <span class="blockquote-footer">This quote was posted: {{ quote.completeDate | timeAgo}}</span>
               </h6>
               &nbsp;
               <small
